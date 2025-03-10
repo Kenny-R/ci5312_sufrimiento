@@ -1,0 +1,5 @@
+/home/hadoop/hadoop_projects/map_reduces/map_reduces/src/main/java/com/map/reduces/SortVideosByLikesAndViews.java
+/home/hadoop/hadoop_projects/map_reduces/map_reduces/src/main/java/com/map/reduces/ViewsLikesKey.java
+/home/hadoop/hadoop_projects/map_reduces/map_reduces/src/main/java/com/map/reduces/TrendingVideoKey.java
+/home/hadoop/hadoop_projects/map_reduces/map_reduces/src/main/java/com/map/reduces/App.java
+/home/hadoop/hadoop_projects/map_reduces/map_reduces/src/main/java/com/map/reduces/RemoveDescriptionMapper.java

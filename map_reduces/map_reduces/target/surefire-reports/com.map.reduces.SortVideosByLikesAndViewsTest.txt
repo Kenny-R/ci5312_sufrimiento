@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.map.reduces.SortVideosByLikesAndViewsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.021 s <<< FAILURE! - in com.map.reduces.SortVideosByLikesAndViewsTest
+testMap(com.map.reduces.SortVideosByLikesAndViewsTest)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method withMapper(Mapper<LongWritable,Text,TrendingVideoKey,LongWritable>) in the type MapDriver<LongWritable,Text,TrendingVideoKey,LongWritable> is not applicable for the arguments (SortVideosByLikesAndViewsMapper)
+
+	at com.map.reduces.SortVideosByLikesAndViewsTest.testMap(SortVideosByLikesAndViewsTest.java:25)
+
