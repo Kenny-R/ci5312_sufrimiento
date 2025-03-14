@@ -1,0 +1,19 @@
+-- crear_trending_metrics_BR
+-- Para crear la tabla con los datos calculados con las proporciones
+DROP TABLE IF EXISTS trending_metrics_BR;
+CREATE EXTERNAL TABLE trending_metrics_BR (
+    video_id STRING,
+    trending_date STRING,
+    likes_to_views_ratio DOUBLE,
+    dislikes_to_views_ratio DOUBLE,
+    comments_to_views_ratio DOUBLE,
+    likes_to_dislikes_ratio DOUBLE,
+    views INT,
+    likes INT,
+    dislikes INT,
+    comments INT,
+    category STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+LOCATION '/user/hadoop2/output/BR_proporciones';

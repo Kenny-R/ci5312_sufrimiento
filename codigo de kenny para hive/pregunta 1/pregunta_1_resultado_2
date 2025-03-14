@@ -1,0 +1,9 @@
+-- pregunta_1_resultado_2
+INSERT OVERWRITE DIRECTORY '/user/hadoop2/output/BR_pregunta_1_resultado_2'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+SELECT ranked_BR.ranking, ranked_BR.title, trending_metrics_BR.*
+FROM trending_metrics_BR INNER JOIN ranked_BR 
+    ON (trending_metrics_BR.video_id = ranked_BR.video_id AND
+        trending_metrics_BR.trending_date = ranked_BR.trending_date)
+ORDER BY views DESC, likes_to_views_ratio DESC, dislikes_to_views_ratio DESC, comments_to_views_ratio DESC, likes_to_dislikes_ratio DESC;

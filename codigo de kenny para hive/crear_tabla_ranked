@@ -1,0 +1,24 @@
+-- crear_tabla_ranked_BR
+-- Para crear la tabla con los datos de los rankings
+DROP TABLE IF EXISTS ranked_BR;
+CREATE EXTERNAL TABLE ranked_BR (
+    video_id STRING,
+    title STRING,
+    published_at STRING,
+    channel_id STRING,
+    channel_title STRING,
+    category STRING,
+    trending_date STRING,
+    tags STRING,
+    views INT,
+    likes INT,
+    dislikes INT,
+    comments INT,
+    thumbnail_link STRING,
+    comments_disabled BOOLEAN,
+    ratings_disable BOOLEAN,
+    ranking INT
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+LOCATION '/user/hadoop2/datasets_ranked/';

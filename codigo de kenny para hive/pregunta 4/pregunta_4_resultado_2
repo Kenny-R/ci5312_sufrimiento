@@ -1,0 +1,46 @@
+-- pregunta_4_resultado_2
+-- Crear la tabla temporal categorias_por_canal
+WITH categorias_por_canal AS (
+    SELECT 
+        channel_id,
+        channel_title,
+        COUNT(DISTINCT category) AS distinct_category_count
+    FROM 
+        ranked_BR
+    GROUP BY 
+        channel_id,
+        channel_title
+    ORDER BY 
+        distinct_category_count DESC
+),
+
+-- Crear la tabla temporal para contar los videos en el top 50 de cada canal
+top_videos_canal AS (
+    SELECT 
+        channel_id,
+        COUNT(*) AS top_videos_count
+    FROM 
+        ranked_BR
+    WHERE 
+        ranking <= 50
+    GROUP BY 
+        channel_id
+)
+
+-- Unir las tablas temporales y ordenar por la cantidad de videos en el top 50
+INSERT OVERWRITE DIRECTORY '/user/hadoop2/output/BR_pregunta_4_resultado_2'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+SELECT 
+    cpc.channel_id,
+    cpc.channel_title,
+    cpc.distinct_category_count,
+    tvc.top_videos_count
+FROM 
+    categorias_por_canal cpc
+JOIN 
+    top_videos_canal tvc
+ON 
+    cpc.channel_id = tvc.channel_id
+ORDER BY 
+    tvc.top_videos_count DESC;
