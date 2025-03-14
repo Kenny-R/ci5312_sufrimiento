@@ -27,7 +27,7 @@ y el valor de cada fila es la categoria del video
 
 ## XX_pregunta_1_resultado_1
 
-Contiene los videos los videos ordenados por la proporcion de likes/vistas. cada fila del archivo (que es un archivo de texto donde cada valor esta separado por \t) esta conformado por las siguientes columnas:
+Contiene los videos los videos ordenados por la proporcion de likes/vistas. cada fila del archivo (que es un archivo de texto donde cada valor esta separado por ",") esta conformado por las siguientes columnas:
 - ranking = posición del video entre los mejores 200 de ese dia 
 - title = Titulo del video
 - videoId = El id del video
@@ -50,7 +50,7 @@ Realmente este archivo esta ordenado siguiendo la siguiente jerarquia:
 
 
 ## XX_pregunta_1_resultado_2
-Contiene los videos los videos ordenados por la cantidad de vistas. cada fila del archivo (que es un archivo de texto donde cada valor esta separado por \t) esta conformado por las siguientes columnas:
+Contiene los videos los videos ordenados por la cantidad de vistas. cada fila del archivo (que es un archivo de texto donde cada valor esta separado por ",") esta conformado por las siguientes columnas:
 - ranking = posición del video entre los mejores 200 de ese dia 
 - title = Titulo del video
 - videoId = El id del video
@@ -75,7 +75,7 @@ Realmente este archivo esta ordenado siguiendo la siguiente jerarquia:
 
 ## XX_pregunta_4_resultado_1
 
-Contiene los canales del dataset del pais XX ordenados por la cantidad de videos que se volvieron tendencia y entraron entre los mejores 50 en una fecha en especifico. Al igual que antes es un archivo de texto donde los datos estan separados por "\t". Cada fila esta conformado por las siguientes columnas:
+Contiene los canales del dataset del pais XX ordenados por la cantidad de videos que se volvieron tendencia y entraron entre los mejores 50 en una fecha en especifico. Al igual que antes es un archivo de texto donde los datos estan separados por ",". Cada fila esta conformado por las siguientes columnas:
 
 - trending_date= Fecha en la que el uno o mas videos se hicieron trending de ese canal
 - channel_id= Id de canal

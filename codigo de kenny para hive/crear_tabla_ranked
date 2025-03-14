@@ -21,4 +21,4 @@ CREATE EXTERNAL TABLE ranked_BR (
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\t'
-LOCATION '/user/hadoop2/datasets_ranked/';
+LOCATION '/user/hadoop2/BR_ranked/';
